@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-light.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="stylesheets/blueimp-gallery.min.css">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -58,23 +60,56 @@
 </ul>
 
 <p><a href="http://map.naver.com/?dlevel=12&amp;pinType=site&amp;pinId=12824078&amp;x=127.0356644&amp;y=37.4822476&amp;enc=b64"><img src="http://bit.ly/jc-naomi-wedding-map" alt="오시는 길"></a></p>
+        <hr>
+        <div class="gallery">
+          <a href="images/gallery/2P1A2538.jpg"><img src="images/gallery/thumbnails/2P1A2538.jpg" alt="2P1A2538" /></a>
+          <a href="images/gallery/2P1A2608.jpg"><img src="images/gallery/thumbnails/2P1A2608.jpg" alt="2P1A2608" /></a>
+          <a href="images/gallery/2P1A2771.jpg"><img src="images/gallery/thumbnails/2P1A2771.jpg" alt="2P1A2771" /></a>
+          <a href="images/gallery/black3.png"><img src="images/gallery/thumbnails/black3.png" alt="black3" /></a>
+          <a href="images/gallery/color4.png"><img src="images/gallery/thumbnails/color4.png" alt="color4" /></a>
+          <a href="images/gallery/color5.png"><img src="images/gallery/thumbnails/color5.png" alt="color5" /></a>
+          <a href="images/gallery/color7.png"><img src="images/gallery/thumbnails/color7.png" alt="color7" /></a>
+          <a href="images/gallery/color8.png"><img src="images/gallery/thumbnails/color8.png" alt="color8" /></a>
+          <a href="images/gallery/color9.png"><img src="images/gallery/thumbnails/color9.png" alt="color9" /></a>
+        </div>
+        <div id="blueimp-gallery" class="blueimp-gallery">
+          <div class="slides"></div>
+          <h3 class="title"></h3>
+          <a class="prev">‹</a>
+          <a class="next">›</a>
+          <a class="close">×</a>
+          <a class="play-pause"></a>
+          <ol class="indicator"></ol>
+        </div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/shinvee">shinvee</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-69246495-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
+    <script src="javascripts/blueimp-gallery.min.js"></script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-69246495-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
+      $(function() {
+        $('.gallery')[0].onclick = function (event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement,
+              link = target.src ? target.parentNode : target,
+              options = {index: link, event: event},
+              links = this.getElementsByTagName('a');
+          blueimp.Gallery(links, options);
+        };
+      });
+    </script>
   </body>
 </html>

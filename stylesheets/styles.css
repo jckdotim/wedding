@@ -183,6 +183,12 @@ footer {
   bottom:50px;
 }
 
+
+.gallery img {
+  width: 32%;
+  height: auto;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
