@@ -81,12 +81,22 @@
         </div>
       </section>
       <footer>
-        <form action="sms:010-2989-1913" class="border">
-          <input type="submit" value="신랑에게 연락하기" />
-        </form>
-        <form action="sms:010-9557-6862" class="border">
-          <input type="submit" value="신부에게 연락하기" />
-        </form>
+        <div class="desktop-only">
+          <form action="mailto:shinvee@gmail.com" class="border">
+            <input type="submit" value="신랑에게 연락하기" />
+          </form>
+          <form action="mailto:urisum@gmail.com" class="border">
+            <input type="submit" value="신부에게 연락하기" />
+          </form>
+        </div>
+        <div class="desktop-else">
+          <form action="sms:010-2989-1913" class="border">
+            <input type="submit" value="신랑에게 연락하기" />
+          </form>
+          <form action="sms:010-9557-6862" class="border">
+            <input type="submit" value="신부에게 연락하기" />
+          </form>
+        </div>
       </footer>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

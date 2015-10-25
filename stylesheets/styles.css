@@ -297,6 +297,10 @@ form.border input.active {
   }
 }
 
+.desktop-else {
+  display: none;
+}
+
 @media print, screen and (max-width: 720px) {
   body {
     word-wrap:break-word;
@@ -325,6 +329,14 @@ form.border input.active {
 
   pre, code {
     word-wrap:normal;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .desktop-else {
+    display: block;
   }
 }
 
