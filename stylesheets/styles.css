@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:18px/1.5 "Spoqa Han Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
 }
@@ -96,7 +96,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:320px;
   float:left;
   position:fixed;
 }
@@ -118,7 +118,7 @@ header ul {
   border-radius:5px;
   border:1px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
+  width:320px;
 }
 
 header li {
@@ -159,10 +159,19 @@ header ul a strong {
   color:#222;
 }
 
-section {
+section.main {
   width:500px;
   float:right;
   padding-bottom:50px;
+  text-align: center;
+}
+
+section.main ul {
+  padding-left: 0;
+}
+
+section.main ul li {
+  list-style: none;
 }
 
 small {
@@ -177,12 +186,46 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:320px;
   float:left;
   position:fixed;
   bottom:50px;
 }
 
+form.border {
+  display: inline;
+}
+
+form.border input {
+  margin: 0 10px 0 0;
+  padding: 10px 45px;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+form.border input:focus {
+  outline: none
+}
+
+form.border input {
+  color: #6496c8;
+  background: rgba(0,0,0,0);
+  border: solid 1px #6496c8;
+  padding: 10px;
+  font-size: 16px;
+}
+form.border input:hover,
+form.border input.hover {
+  border-color: #346392;
+  color: #346392;
+}
+form.border input:active,
+form.border input.active {
+  border-color: #27496d;
+  color: #27496d;
+}
 
 .gallery img {
   width: 32%;
@@ -196,17 +239,17 @@ footer {
     margin:0;
   }
 
-  header, section, footer {
+  header, section.main, footer {
     float:none;
     position:static;
     width:auto;
   }
 
   header {
-    padding-right:320px;
+    text-align: center;
   }
 
-  section {
+  section.main {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
@@ -222,6 +265,10 @@ footer {
     right:50px;
     top:52px;
   }
+
+  footer {
+    text-align: center;
+  }
 }
 
 @media print, screen and (max-width: 720px) {
@@ -231,6 +278,7 @@ footer {
 
   header {
     padding:0;
+    text-align: center;
   }
 
   header ul, header p.view {
@@ -245,6 +293,7 @@ footer {
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
+    font-size: 14px;
   }
 
   header ul {
