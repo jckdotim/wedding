@@ -4,12 +4,6 @@ body {
   font:18px/1.5 "Spoqa Han Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
-  background-color: #333;
-  background: url("../images/gallery/2P1A2608_4.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   margin: 0;
 }
 
@@ -115,7 +109,15 @@ img {
 }
 
 header {
-  margin-top: 400px;
+   background:  url("../images/gallery/2P1A2608_4.png") no-repeat top center fixed;
+   background-size: cover;
+   height: 400px;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   color: white;
+   text-align: center;
+   font-size: 50px;
 }
 
 header ul {
