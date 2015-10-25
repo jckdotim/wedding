@@ -1,10 +1,34 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
 body {
-  padding:50px;
   font:18px/1.5 "Spoqa Han Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
+  background-color: #333;
+  background: url("../images/gallery/2P1A2608_4.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+
+.wrapper {
+  background-color: #fff;
+  width: 100%;
+}
+
+header, section.main, footer {
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+section.main {
+    border:1px solid #e5e5e5;
+    border-width:1px 0;
+    padding:20px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,11 +67,6 @@ a small {
   color:#777;
   margin-top:-0.6em;
   display:block;
-}
-
-.wrapper {
-  width:860px;
-  margin:0 auto;
 }
 
 blockquote {
@@ -96,9 +115,7 @@ img {
 }
 
 header {
-  width:320px;
-  float:left;
-  position:fixed;
+  margin-top: 400px;
 }
 
 header ul {
@@ -160,9 +177,7 @@ header ul a strong {
 }
 
 section.main {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
+  padding-bottom:20px;
   text-align: center;
 }
 
@@ -186,10 +201,9 @@ hr {
 }
 
 footer {
-  width:320px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 form.border {
@@ -249,13 +263,6 @@ form.border input.active {
     text-align: center;
   }
 
-  section.main {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-
   header a small {
     display:inline;
   }
@@ -264,10 +271,6 @@ form.border input.active {
     position:absolute;
     right:50px;
     top:52px;
-  }
-
-  footer {
-    text-align: center;
   }
 }
 
@@ -292,12 +295,15 @@ form.border input.active {
 
 @media print, screen and (max-width: 480px) {
   body {
-    padding:15px;
     font-size: 14px;
   }
 
   header ul {
     display:none;
+  }
+
+  form.border input {
+    font-size: 14px;
   }
 }
 
