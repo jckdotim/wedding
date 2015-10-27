@@ -266,6 +266,10 @@ form.border input.active {
   margin-bottom: 10px;
 }
 
+img.map {
+  width: 820px;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
