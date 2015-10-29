@@ -121,6 +121,9 @@
           <form action="sms:010-9557-6862" class="border">
             <input type="submit" value="신부에게 연락하기" />
           </form>
+          <p>
+            <a id="kakao-link-btn" />카카오톡으로 공유하기</a>
+          </p>
         </div>
       </footer>
     </div>
@@ -128,6 +131,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/blueimp-gallery.min.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -146,6 +150,22 @@
               links = this.getElementsByTagName('a');
           blueimp.Gallery(links, options);
         };
+
+        Kakao.init('838d9e2fee8557746f7bbf09c3cae0a3');
+
+        Kakao.Link.createTalkLinkButton({
+          container: '#kakao-link-btn',
+          label: '# 저희 결혼합니다.\n\n김재석 & 남유정\n\n오랫동안 함께 하고 싶은 사람을 만났습니다.\n존중하고 신뢰하고 사랑하며 살겠습니다.\n부디 오셔서 저희를 축복해주시면 감사하겠습니다.',
+          image: {
+            src: 'http://www.jcxnaomi.at/images/gallery/2P1A2608_4.png',
+            width: '1771',
+            height: '1774'
+          },
+          webButton: {
+            text: '시간과 장소 보기',
+            url: 'http://jcxnaomi.at' // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+          }
+        });
       });
     </script>
   </body>
