@@ -219,11 +219,11 @@ footer {
   padding-bottom: 40px;
 }
 
-form.border {
+.border {
   display: inline;
 }
 
-form.border input {
+.border input, .border a {
   margin: 0 10px 0 0;
   padding: 10px 45px;
   line-height: 1.8;
@@ -232,7 +232,7 @@ form.border input {
   border-radius: 0;
 }
 
-form.border input:focus {
+.border input:focus {
   outline: none
 }
 
