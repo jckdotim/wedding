@@ -219,12 +219,12 @@ footer {
   padding-bottom: 40px;
 }
 
-.border {
+form.border {
   display: inline;
 }
 
-.border input, .border a {
-  margin: 0 10px 0 0;
+form.border input {
+  margin: 0 6px 0 6px;
   padding: 10px 45px;
   line-height: 1.8;
   appearance: none;
@@ -232,7 +232,7 @@ footer {
   border-radius: 0;
 }
 
-.border input:focus {
+form.border input:focus {
   outline: none
 }
 
@@ -250,6 +250,28 @@ form.border input.hover {
 }
 form.border input:active,
 form.border input.active {
+  border-color: #222222;
+  color: #222222;
+}
+
+#kakao-link-btn {
+  display: block;
+  color: #888888;
+  background: rgba(0,0,0,0);
+  border: solid 1px #888888;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#kakao-link-btn:hover {
+  border-color: #333333;
+  color: #333333;
+}
+
+#kakao-link-btn:active {
   border-color: #222222;
   color: #222222;
 }
